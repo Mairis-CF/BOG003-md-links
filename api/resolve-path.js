@@ -1,8 +1,8 @@
-const path = require("path");
-const fs = require("fs");
 /**Los modulos nativos "path" y "fs", mejor descrito como "File System" proporcionan, el primer caso, una API para interactuar con el 
  * sistema de rutas y, en el segundo caso, una API para interactuar con el sistema de archivos de la maquina
  */
+const path = require('path');
+const fs = require('fs');
 
 //función que evalua si la ruta entregada existe, retorna un valor booleano
 const pathExist = ruta => fs.existsSync(ruta)

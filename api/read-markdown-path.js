@@ -1,18 +1,18 @@
-const solvePath = require("./resolve-path"); //Módulo que exporta un objeto con funciones para operar rutas 
-const fileHound = require("filehound"); //librería publica que exporta funciones avanzadas, sincronas como asínconas, para explorar el sistema de archivos
+const solvePath = require('./resolve-path'); //Módulo que exporta un objeto con funciones para operar rutas 
+const fileHound = require('filehound'); //librería publica que exporta funciones avanzadas, tanto sincronas como asínconas, para explorar el sistema de archivos
 
 /**La función readDirectory realiza una busqueda profunda o recursiva en el directorio de una ruta entregada
  * hasta dar con archivos .md, emplea métodos propios de la libreria filehound
  */
 const readDirectory = ruta => {
     
-        const mdFiles = fileHound.create()//se crea una nueva instacia de función recursiva con file hound, que guardaŕa los resultados de la busqueda en una arrar (mdFiles)
+        const mdFiles = fileHound.create()//se crea una nueva instacia de función recursiva con filehound, que guardaŕa los resultados de la busqueda en una array (mdFiles)
             .paths(ruta)//se le indica dónde realizará la busqueda
             .ext('md')//se expecifica qué tipo de archivos buscará
             .findSync();//se especifica la naturaleza de la busqueda (en este caso, es una busqueda síncrona)
 
     return mdFiles.length === 0 ?
-    console.log(`No existen archivos .md en la ruta: ${ruta}`) : mdFiles.concat(mdFiles.length)
+    console.log(`No existen archivos .md en la ruta: ${ruta}`) : mdFiles.concat(`total de archivos: ${mdFiles.length}`)
 //si la longitud del array mdFiles es o (o sea, si no existen archivos .md en la ruta) se retorna un mensaje en consola
 //de otra forma, se retorna un array con todos los hallazgos de la busqueda, junto a la ruta especifica en la que se encontraron y la cantidad de archivos presentes
 }
@@ -43,13 +43,10 @@ const readPath = ruta => {
     else if (solvePath(ruta)['isDirectory'])
         return readDirectory(ruta)
 
-    else 
-       return console.log(`la ruta ${ruta} no es válida`)
-
 }
 
 
-// console.log('*Qué hay en la ruta?*', readPath('/home/mairis/Documentos/BOG003-md-links/prueba'))
+//console.log(readPath('/home/mairis/Documentos/BOG003-md-links/test'))
 // Ejemplo de uso
 
 module.exports = readPath;
