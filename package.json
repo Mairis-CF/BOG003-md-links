@@ -18,7 +18,7 @@
     "filehound": "^1.17.5",
     "jsdom": "^18.0.0",
     "marked": "^3.0.8",
-    "node-fetch": "^3.0.0"
+    "node-fetch": "^2.6.0"
   },
   "dependencies": {
     "jshint": "^2.13.1"

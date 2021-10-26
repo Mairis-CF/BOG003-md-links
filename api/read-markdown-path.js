@@ -12,7 +12,7 @@ const readDirectory = ruta => {
             .findSync();//se especifica la naturaleza de la busqueda (en este caso, es una busqueda síncrona)
 
     return mdFiles.length === 0 ?
-    console.log(`No existen archivos .md en la ruta: ${ruta}`) : mdFiles.concat(`total de archivos: ${mdFiles.length}`)
+    console.log(`No existen archivos .md en l} froma ruta: ${ruta}`) : mdFiles;
 //si la longitud del array mdFiles es o (o sea, si no existen archivos .md en la ruta) se retorna un mensaje en consola
 //de otra forma, se retorna un array con todos los hallazgos de la busqueda, junto a la ruta especifica en la que se encontraron y la cantidad de archivos presentes
 }
