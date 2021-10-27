@@ -1,8 +1,8 @@
 {
   "name": "md-links",
   "version": "1.0.0",
-  "description": "Librería de interfaz API que analiza links en archivos markdown",
-  "main": "api/index.js",
+  "description": "Librería importable programaticamente para analizar archivos markdown.",
+  "main": "lib/api/index.js",
   "author": "mairis-CF",
   "license": "MIT",
   "keywords": [
@@ -10,8 +10,7 @@
     "markdown",
     "node.js",
     "javascript",
-    "api",
-    "jest"
+    "api"
   ],
   "devDependencies": {
     "eslint": "^8.0.1",
@@ -22,5 +21,14 @@
   },
   "dependencies": {
     "jshint": "^2.13.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mairis-CF/BOG003-md-links"
+  },
+
+  "bugs": {
+    "url": "https://github.com/Mairis-CF/BOG003-md-links/issues"
   }
 }
+
